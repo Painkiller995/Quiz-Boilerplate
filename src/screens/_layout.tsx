@@ -7,6 +7,14 @@ export default function Layout() {
         name="main-screen"
         options={{
           title: 'Main Screen',
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="settings-screen"
+        options={{
+          title: 'Settings',
+          headerShown: false,
         }}
       />
     </Stack>
