@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'nativewind';
 import { ImageBackground, Switch, Text, View } from 'react-native';
 
+import { Button } from '@/components/Button';
 import { generateStyles } from '@/styles';
 
 // Import the image file
@@ -24,6 +25,9 @@ const SettingsScreen = () => {
           <Text style={styles.mainText}>Settings</Text>
           <Text style={styles.text}>Information...</Text>
           <Switch value={colorScheme === 'dark'} onChange={toggleColorScheme} />
+          <Button title="Test 1" />
+          <Button title="Test 2" />
+          <Button title="Test 3" />
         </View>
       </ImageBackground>
     </View>

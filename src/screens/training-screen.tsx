@@ -1,15 +1,13 @@
-import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'nativewind';
 import { ImageBackground, Text, View } from 'react-native';
 
-import { Button } from '@/components/Button';
 import { generateStyles } from '@/styles';
 
 // Import the image file
 const backgroundImage = require('../../assets/background.png');
 
-const MainScreen = () => {
+const TrainingScreen = () => {
   // Load Styles ----------------------------
   const { colorScheme } = useColorScheme();
   const styles = generateStyles(colorScheme);
@@ -23,22 +21,10 @@ const MainScreen = () => {
         blurRadius={4}
       >
         <View style={styles.imageView}>
-          <Text style={styles.mainText}>Main Screen</Text>
-          <Link href="training-screen" asChild>
-            <Button title="Training" />
-          </Link>
-          <Link href="quiz-screen" asChild>
-            <Button title="Quiz" />
-          </Link>
-          <Link href="settings-screen" asChild>
-            <Button title="Settings" />
-          </Link>
-          <Link href="about-screen" asChild>
-            <Button title="About" />
-          </Link>
+          <Text style={styles.mainText}>Training Screen</Text>
         </View>
       </ImageBackground>
     </View>
   );
 };
-export default MainScreen;
+export default TrainingScreen;

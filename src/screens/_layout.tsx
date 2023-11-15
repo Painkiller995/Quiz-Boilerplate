@@ -11,6 +11,20 @@ export default function Layout() {
         }}
       />
       <Stack.Screen
+        name="training-screen"
+        options={{
+          title: 'Training',
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="quiz-screen"
+        options={{
+          title: 'Quiz',
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
         name="settings-screen"
         options={{
           title: 'Settings',
