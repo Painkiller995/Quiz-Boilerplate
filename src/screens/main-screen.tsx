@@ -1,10 +1,13 @@
 import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'nativewind';
-import { Text, View } from 'react-native';
+import { ImageBackground, Text, View } from 'react-native';
 
 import { Button } from '@/components/Button';
 import { generateStyles } from '@/styles';
+
+// Import the image file
+const backgroundImage = require('../../assets/background.png');
 
 const MainScreen = () => {
   // Load Styles ----------------------------
@@ -14,14 +17,20 @@ const MainScreen = () => {
   return (
     <View style={styles.container}>
       <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
-      <Text style={styles.mainText}>Main Screen</Text>
-      <Link href="settings-screen">Go to Settings</Link>
-      <Button
-        title="Settings"
-        onClick={() => {
-          console.log('Test');
-        }}
-      />
+      <ImageBackground source={backgroundImage} style={styles.image}>
+        <View style={styles.imageView}>
+          <Text style={styles.mainText}>Main Screen</Text>
+          <Link href="settings-screen" asChild>
+            <Button title="Start" />
+          </Link>
+          <Link href="settings-screen" asChild>
+            <Button title="Settings" />
+          </Link>
+          <Link href="settings-screen" asChild>
+            <Button title="Exit" />
+          </Link>
+        </View>
+      </ImageBackground>
     </View>
   );
 };

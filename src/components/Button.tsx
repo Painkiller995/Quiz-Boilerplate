@@ -5,16 +5,16 @@ import { generateStyles } from '@/styles';
 
 interface ButtonProps {
   title: string;
-  onClick?: () => void;
+  onPress?: () => void;
 }
-export const Button = ({ title, onClick }: ButtonProps) => {
+export const Button = ({ title, onPress }: ButtonProps) => {
   // Load Styles ----------------------------
   const { colorScheme } = useColorScheme();
   const styles = generateStyles(colorScheme);
   // ----------------------------
 
   return (
-    <TouchableOpacity onPress={onClick} style={styles.buttonContainer}>
+    <TouchableOpacity onPress={onPress} style={styles.buttonContainer}>
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );

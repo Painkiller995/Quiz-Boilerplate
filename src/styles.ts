@@ -4,22 +4,37 @@ export const generateStyles = (colorScheme: string) => {
   return StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: colorScheme === 'dark' ? '#333' : '#fff',
+      backgroundColor: colorScheme === 'dark' ? '#FDF9D9' : '#FDF9D9',
+    },
+    image: {
+      flex: 1,
+      resizeMode: 'cover',
+      justifyContent: 'center',
+    },
+    imageView: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: 10,
     },
     mainText: {
       fontSize: 40,
-      color: colorScheme === 'dark' ? 'red' : 'blue',
+      color: colorScheme === 'dark' ? '#FF6347' : '#FF6347',
     },
     buttonContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: colorScheme === 'dark' ? '#333' : '#fff',
+      height: '10%',
+      width: '55%',
+      marginTop: 15,
+      borderRadius: 30,
+      borderWidth: 4,
+      borderColor: 'rgba(0,0,0,0)',
+      backgroundColor: colorScheme === 'dark' ? '#3A8D71' : '#3A8D71',
     },
     buttonText: {
-      fontSize: 40,
-      color: colorScheme === 'dark' ? 'red' : 'blue',
+      fontSize: 25,
+      color: colorScheme === 'dark' ? '#FF6347' : '#FF6347',
     },
   });
 };
