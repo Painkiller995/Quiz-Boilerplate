@@ -21,13 +21,16 @@ const MainScreen = () => {
         <View style={styles.imageView}>
           <Text style={styles.mainText}>Main Screen</Text>
           <Link href="settings-screen" asChild>
-            <Button title="Start" />
+            <Button title="Training" />
+          </Link>
+          <Link href="settings-screen" asChild>
+            <Button title="Exam" />
           </Link>
           <Link href="settings-screen" asChild>
             <Button title="Settings" />
           </Link>
           <Link href="settings-screen" asChild>
-            <Button title="Exit" />
+            <Button title="About" />
           </Link>
         </View>
       </ImageBackground>

@@ -19,13 +19,13 @@ export const generateStyles = (colorScheme: string) => {
     },
     mainText: {
       fontSize: 40,
-      color: colorScheme === 'dark' ? '#FF6347' : '#FF6347',
+      color: colorScheme === 'dark' ? 'white' : 'white',
     },
     buttonContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      height: '10%',
-      width: '55%',
+      height: '13%',
+      width: '60%',
       marginTop: 15,
       borderRadius: 30,
       borderWidth: 4,
@@ -34,7 +34,7 @@ export const generateStyles = (colorScheme: string) => {
     },
     buttonText: {
       fontSize: 25,
-      color: colorScheme === 'dark' ? '#FF6347' : '#FF6347',
+      color: colorScheme === 'dark' ? 'white' : 'white',
     },
   });
 };
