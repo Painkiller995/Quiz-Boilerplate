@@ -17,6 +17,10 @@ export const generateStyles = (colorScheme: string) => {
       alignItems: 'center',
       padding: 10,
     },
+    text: {
+      fontSize: 20,
+      color: colorScheme === 'dark' ? 'white' : 'white',
+    },
     mainText: {
       fontSize: 40,
       color: colorScheme === 'dark' ? 'white' : 'white',

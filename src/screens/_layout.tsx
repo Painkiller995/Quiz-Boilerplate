@@ -17,6 +17,13 @@ export default function Layout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="about-screen"
+        options={{
+          title: 'About',
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }
