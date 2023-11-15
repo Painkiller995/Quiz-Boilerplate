@@ -1,14 +1,31 @@
+import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'nativewind';
-import { Switch, Text, View } from 'react-native';
+import { ImageBackground, Switch, Text, View } from 'react-native';
+
+import { generateStyles } from '@/styles';
+
+// Import the image file
+const backgroundImage = require('../../assets/background.png');
 
 const SettingsScreen = () => {
+  // Load Styles ----------------------------
   const { colorScheme, toggleColorScheme } = useColorScheme();
-
+  const styles = generateStyles(colorScheme);
+  // ----------------------------
   return (
-    <View className="flex-1 items-center justify-center dark:bg-neutral-700">
-      <View className="flex-row items-center justify-center space-x-2" />
-      <Text className="text-xl dark:text-white">Toggle Theme</Text>
-      <Switch value={colorScheme === 'dark'} onChange={toggleColorScheme} />
+    <View style={styles.container}>
+      <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
+      <ImageBackground
+        source={backgroundImage}
+        style={styles.image}
+        blurRadius={4}
+      >
+        <View style={styles.imageView}>
+          <Text style={styles.mainText}>Settings</Text>
+          <Text style={styles.text}>Information...</Text>
+          <Switch value={colorScheme === 'dark'} onChange={toggleColorScheme} />
+        </View>
+      </ImageBackground>
     </View>
   );
 };
