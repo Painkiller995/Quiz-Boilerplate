@@ -12,5 +12,14 @@ export const generateStyles = (colorScheme: string) => {
       fontSize: 40,
       color: colorScheme === 'dark' ? 'red' : 'blue',
     },
+    buttonContainer: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: colorScheme === 'dark' ? '#333' : '#fff',
+    },
+    buttonText: {
+      fontSize: 40,
+      color: colorScheme === 'dark' ? 'red' : 'blue',
+    },
   });
 };
