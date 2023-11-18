@@ -1,9 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'nativewind';
-import { ImageBackground, Text, View } from 'react-native';
+import {
+  ImageBackground,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
+} from 'react-native';
 
+import { Button } from '@/components/button';
 import { generateStyles } from '@/styles';
-
 // Import the image file
 const backgroundImage = require('../../assets/background.png');
 
@@ -20,9 +26,14 @@ const TrainingScreen = () => {
         style={styles.image}
         blurRadius={4}
       >
-        <View style={styles.imageView}>
-          <Text style={styles.mainText}>Training Screen</Text>
-        </View>
+        <SafeAreaView style={styles.safeArea}>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <Text style={styles.text}>Training Screen</Text>
+            <Button title="Settings" />
+            <Button title="Settings" />
+            <Button title="Settings" />
+          </ScrollView>
+        </SafeAreaView>
       </ImageBackground>
     </View>
   );

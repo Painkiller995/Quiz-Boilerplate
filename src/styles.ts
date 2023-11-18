@@ -12,6 +12,11 @@ export const generateStyles = (colorScheme: string) => {
       resizeMode: 'cover',
       justifyContent: 'center',
     },
+    imageStyle: {
+      flex: 1,
+      marginTop: 50,
+      justifyContent: 'space-between',
+    },
     imageView: {
       justifyContent: 'center',
       alignItems: 'center',
@@ -39,6 +44,11 @@ export const generateStyles = (colorScheme: string) => {
     buttonText: {
       fontSize: 25,
       color: colorScheme === 'dark' ? 'white' : 'white',
+    },
+    safeArea: {
+      flex: 1,
+      marginTop: 50,
+      justifyContent: 'space-between',
     },
   });
 };

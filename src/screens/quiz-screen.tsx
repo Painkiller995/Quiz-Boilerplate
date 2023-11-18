@@ -1,6 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'nativewind';
-import { ImageBackground, Text, View } from 'react-native';
+import {
+  ImageBackground,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
+} from 'react-native';
 
 import { generateStyles } from '@/styles';
 
@@ -20,9 +26,11 @@ const QuizScreen = () => {
         style={styles.image}
         blurRadius={4}
       >
-        <View style={styles.imageView}>
-          <Text style={styles.mainText}>QuizScreen</Text>
-        </View>
+        <SafeAreaView style={styles.safeArea}>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <Text style={styles.mainText}>QuizScreen</Text>
+          </ScrollView>
+        </SafeAreaView>
       </ImageBackground>
     </View>
   );
