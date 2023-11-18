@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 
 import { generateStyles } from '@/styles';
-
 // Import the image file
 const backgroundImage = require('../../assets/background.png');
 
