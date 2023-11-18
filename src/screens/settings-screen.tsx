@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'nativewind';
 import { ImageBackground, Switch, Text, View } from 'react-native';
 
-import { Button } from '@/components/Button';
+import { Button } from '@/components/button';
 import { generateStyles } from '@/styles';
 
 // Import the image file
