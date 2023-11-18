@@ -30,7 +30,7 @@ export const generateStyles = (colorScheme: string) => {
       fontSize: 40,
       color: colorScheme === 'dark' ? 'white' : 'white',
     },
-    buttonContainer: {
+    buttonOpacity: {
       alignItems: 'center',
       justifyContent: 'center',
       height: '13%',
@@ -48,6 +48,12 @@ export const generateStyles = (colorScheme: string) => {
     safeArea: {
       flex: 1,
       marginTop: 50,
+      justifyContent: 'space-between',
+    },
+    buttonContainer: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      marginTop: 20,
       justifyContent: 'space-between',
     },
   });

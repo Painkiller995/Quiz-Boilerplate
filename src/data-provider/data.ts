@@ -18,6 +18,7 @@ export const questions: QuestionProps[] = [
         text: '3',
       },
     ],
+    imageUri: '../assets/quis/q2.png',
   },
   {
     question: 'Test 2?',
@@ -36,5 +37,6 @@ export const questions: QuestionProps[] = [
         text: '3',
       },
     ],
+    imageUri: '../assets/quis/q2.png',
   },
 ];

@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native';
 
+import { Button, ButtonContainer } from '@/components/button';
 import { generateStyles } from '@/styles';
 // Import the image file
 const backgroundImage = require('../../assets/background.png');
@@ -28,6 +29,12 @@ const QuizScreen = () => {
         <SafeAreaView style={styles.safeArea}>
           <ScrollView showsVerticalScrollIndicator={false}>
             <Text style={styles.mainText}>QuizScreen</Text>
+            <ButtonContainer>
+              <Button title="test" />
+              <Button title="test" />
+              <Button title="test" />
+              <Button title="test" />
+            </ButtonContainer>
           </ScrollView>
         </SafeAreaView>
       </ImageBackground>
