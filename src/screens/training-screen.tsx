@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'nativewind';
+import { useEffect, useState } from 'react';
 import {
   ImageBackground,
   SafeAreaView,
@@ -8,8 +9,10 @@ import {
   View,
 } from 'react-native';
 
+import { Button, ButtonContainer } from '@/components/button';
+import questions from '@/data-provider';
 import { generateStyles } from '@/styles';
-
+import type { QuestionProps } from '@/types/types';
 // Import the image file
 const backgroundImage = require('../../assets/background.png');
 
@@ -18,6 +21,12 @@ const TrainingScreen = () => {
   const { colorScheme } = useColorScheme();
   const styles = generateStyles(colorScheme);
   // ----------------------------
+  const [currentQuestion, setCurrentQuestion] = useState<QuestionProps>();
+
+  useEffect(() => {
+    setCurrentQuestion(questions[0]);
+  }, []);
+
   return (
     <View style={styles.container}>
       <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
@@ -26,9 +35,18 @@ const TrainingScreen = () => {
         style={styles.image}
         blurRadius={4}
       >
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView>
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Text style={styles.text}>Training Screen</Text>
+            <View style={styles.subContainer}>
+              <Text style={styles.secondaryText}>
+                {currentQuestion?.question}
+              </Text>
+              <ButtonContainer>
+                {currentQuestion?.answers.map((answer) => (
+                  <Button key={answer.id} title={answer.text} />
+                ))}
+              </ButtonContainer>
+            </View>
           </ScrollView>
         </SafeAreaView>
       </ImageBackground>
