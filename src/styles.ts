@@ -7,13 +7,15 @@ export const generateStyles = (colorScheme: string) => {
   return StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'center',
       backgroundColor: colorScheme === 'dark' ? '#FDF9D9' : '#FDF9D9',
     },
-    safeArea: {
-      justifyContent: 'center',
+
+    subContainer: {
+      flex: 1,
+      padding: 10,
       alignItems: 'center',
     },
+
     imageView: {
       justifyContent: 'center',
       alignItems: 'center',
@@ -38,21 +40,19 @@ export const generateStyles = (colorScheme: string) => {
       fontSize: 40,
       color: colorScheme === 'dark' ? 'white' : 'white',
     },
-
     secondaryText: {
-      fontSize: 25,
+      paddingTop: 0,
+      paddingBottom: 10,
+      fontSize: 18,
       color: colorScheme === 'dark' ? 'white' : 'white',
     },
 
     buttonOpacity: {
       alignItems: 'center',
       justifyContent: 'center',
-
       height: windowHeight / 12,
       width: windowWidth / 1.5,
-
       margin: '5%',
-
       backgroundColor: colorScheme === 'dark' ? '#3A8D71' : '#3A8D71',
       borderRadius: 30,
       borderWidth: 4,
@@ -61,8 +61,6 @@ export const generateStyles = (colorScheme: string) => {
     buttonContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      height: windowHeight / 1.7,
-      width: windowWidth / 1.4,
     },
     buttonText: {
       fontSize: 25,

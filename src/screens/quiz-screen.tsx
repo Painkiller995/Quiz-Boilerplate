@@ -26,15 +26,20 @@ const QuizScreen = () => {
         style={styles.image}
         blurRadius={4}
       >
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView>
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Text style={styles.secondaryText}>QuizScreen</Text>
-            <ButtonContainer>
-              <Button title="test" />
-              <Button title="test" />
-              <Button title="test" />
-              <Button title="test" />
-            </ButtonContainer>
+            <View style={styles.subContainer}>
+              <Text style={styles.secondaryText}>
+                333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+              </Text>
+
+              <ButtonContainer>
+                <Button title="test" />
+                <Button title="test" />
+                <Button title="test" />
+                <Button title="test" />
+              </ButtonContainer>
+            </View>
           </ScrollView>
         </SafeAreaView>
       </ImageBackground>
