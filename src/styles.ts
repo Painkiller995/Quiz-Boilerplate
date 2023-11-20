@@ -1,4 +1,7 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 export const generateStyles = (colorScheme: string) => {
   return StyleSheet.create({
@@ -7,21 +10,26 @@ export const generateStyles = (colorScheme: string) => {
       justifyContent: 'center',
       backgroundColor: colorScheme === 'dark' ? '#FDF9D9' : '#FDF9D9',
     },
-    image: {
-      flex: 1,
-      resizeMode: 'cover',
+    safeArea: {
       justifyContent: 'center',
-    },
-    imageStyle: {
-      flex: 1,
-      marginTop: 50,
-      justifyContent: 'space-between',
+      alignItems: 'center',
     },
     imageView: {
       justifyContent: 'center',
       alignItems: 'center',
       padding: 10,
     },
+    imageStyle: {
+      flex: 1,
+      marginTop: 50,
+      justifyContent: 'space-between',
+    },
+    image: {
+      flex: 1,
+      resizeMode: 'cover',
+      justifyContent: 'center',
+    },
+
     text: {
       fontSize: 20,
       color: colorScheme === 'dark' ? 'white' : 'white',
@@ -30,31 +38,35 @@ export const generateStyles = (colorScheme: string) => {
       fontSize: 40,
       color: colorScheme === 'dark' ? 'white' : 'white',
     },
+
+    secondaryText: {
+      fontSize: 25,
+      color: colorScheme === 'dark' ? 'white' : 'white',
+    },
+
     buttonOpacity: {
       alignItems: 'center',
       justifyContent: 'center',
-      height: '13%',
-      width: '60%',
-      marginTop: 15,
+
+      height: windowHeight / 12,
+      width: windowWidth / 1.5,
+
+      margin: '5%',
+
+      backgroundColor: colorScheme === 'dark' ? '#3A8D71' : '#3A8D71',
       borderRadius: 30,
       borderWidth: 4,
       borderColor: 'rgba(0,0,0,0)',
-      backgroundColor: colorScheme === 'dark' ? '#3A8D71' : '#3A8D71',
+    },
+    buttonContainer: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: windowHeight / 1.7,
+      width: windowWidth / 1.4,
     },
     buttonText: {
       fontSize: 25,
       color: colorScheme === 'dark' ? 'white' : 'white',
-    },
-    safeArea: {
-      flex: 1,
-      marginTop: 50,
-      justifyContent: 'space-between',
-    },
-    buttonContainer: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      marginTop: 20,
-      justifyContent: 'space-between',
     },
   });
 };

@@ -28,7 +28,7 @@ const QuizScreen = () => {
       >
         <SafeAreaView style={styles.safeArea}>
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Text style={styles.mainText}>QuizScreen</Text>
+            <Text style={styles.secondaryText}>QuizScreen</Text>
             <ButtonContainer>
               <Button title="test" />
               <Button title="test" />
